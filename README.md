@@ -2,38 +2,31 @@
   <img src="https://kybersecure.com/wp-content/uploads/2019/04/NIST-wheel-1.png" alt="Google Logo" width="400" height="200" />
 </p>
 
-
-# Incident Report Analysis: NIST CSF Framework
+# Incident Report Analysis
 
 ## Summary
-This report details an incident involving a DDoS attack on a multimedia company. We apply the NIST CSF framework to analyze the incident and suggest improvements.
+The company experienced a security event when all network services suddenly stopped responding. The cybersecurity team found the disruption was caused by a distributed denial of services (DDoS) attack through a flood of incoming ICMP packets. The team responded by blocking the attack and stopping all non-critical network services, so that critical network services could be restored.
 
 ## Identify
-- **Type of Attack**: DDoS involving a flood of ICMP packets.
-- **Systems Affected**: Internal network services, including web design platforms, graphic design tools, and social media marketing platforms.
+A malicious actor or actors targeted the company with an ICMP flood attack. The entire internal network was affected. All critical network resources needed to be secured and restored to a functioning state.
 
 ## Protect
-- **Immediate Action Plan**:
-  - Implement a firewall rule to limit the rate of incoming ICMP packets.
-  - Conduct source IP address verification on the firewall to filter out spoofed IP addresses on incoming ICMP packets.
-  - Implement an IDS/IPS system to recognize and filter suspicious ICMP traffic patterns.
-  
+The cybersecurity team implemented a new firewall rule to limit the rate of incoming ICMP packets and an IDS/IPS system to filter out some ICMP traffic based on suspicious characteristics.
+
 ## Detect
-- **Monitoring and Analysis**:
-  - Use network monitoring software to detect and alert for abnormal traffic patterns.
-  - Establish a system to continuously monitor incoming external ICMP packets, especially from non-trusted IP addresses.
-  - Track and log both authorized and unauthorized user activity.
-  
+The cybersecurity team configured source IP address verification on the firewall to check for spoofed IP addresses on incoming ICMP packets and implemented network monitoring software to detect abnormal traffic patterns.
+
 ## Respond
-- **Incident Response Plan**:
-  - Containment: Quickly identify the affected areas and isolate them to prevent further spread.
-  - Neutralization: Use firewalls and traffic filters to block malicious traffic.
-  - Analysis: Utilize network logs, system alerts, and intrusion detection systems to understand the attack's origin and purpose.
-  
+For future security events, the cybersecurity team will:
+- Isolate affected systems to prevent further disruption to the network.
+- Attempt to restore any critical systems and services that were disrupted by the event.
+- Analyze network logs to check for suspicious and abnormal activity.
+- Report all incidents to upper management and appropriate legal authorities, if applicable.
+
 ## Recover
-- **Restoration and Recovery Plan**:
-  - Systems: Prioritize critical systems for recovery, ensuring that backup data is clean before restoration.
-  - Processes: Re-validate network processes, especially those related to ICMP traffic.
-  - Data: Restore data from clean backups after ensuring the threat is neutralized.
-
-
+To recover from a DDoS attack by ICMP flooding:
+1. Access to network services need to be restored to a normal functioning state.
+2. In the future, external ICMP flood attacks can be blocked at the firewall.
+3. All non-critical network services should be stopped to reduce internal network traffic.
+4. Critical network services should be restored first.
+5. Once the flood of ICMP packets have timed out, all non-critical network systems and services can be brought back online.
