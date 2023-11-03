@@ -3,6 +3,7 @@
 </p>
 
 # Incident Report Analysis
+> **Disclaimer**: This documentation pertains to a **fictional** company and is part of a lab exercise in the Google Cybersecurity Program. All the data and scenarios presented here are purely fictitious and for educational purposes only.
 
 ## Summary
 The company experienced a security event when all network services suddenly stopped responding. The cybersecurity team found the disruption was caused by a distributed denial of services (DDoS) attack through a flood of incoming ICMP packets. The team responded by blocking the attack and stopping all non-critical network services, so that critical network services could be restored.
